@@ -3,6 +3,7 @@
 var ejs = require('ejs');
 var express = require('express');
 var app = express();
+app.use(express.static(__dirname + '/public'));
 
 var names = ["Mike", "Jimmy", "Roy", "Tara", "Steven"];
 var random = Math.floor(Math.random() * 5);
@@ -30,10 +31,6 @@ app.get('/go', function(req, res) {
     res.render('index.ejs', {action: 'alive', counter: counter});
     //alive
   }
-});
-
-app.get('/restart', function(req, res) {
-
 });
 
 app.listen(3000, function() {

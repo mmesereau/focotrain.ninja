@@ -12,7 +12,7 @@ for (var i = 0; i < names.length; i++) {
   counter.push({name: names[i], survived: 0, died: 0});
 }
 app.get('/', function(req, res) {
-  res.render('index.ejs');
+  res.render('index.ejs', {action: begin, counter: counter});
 });
 
 app.get('/go', function(req, res) {
@@ -21,11 +21,12 @@ app.get('/go', function(req, res) {
   var liveOrDie = Math.floor(Math.random * 2);
   if (liveOrDie % 2) {
     counter[names.indexOf(ninjaName)].died++;
-
+    res.render('index.ejs', {action: dead, counter: counter});
     //dead
   }
   else {
     counter[names.indexOf(ninjaName)].survived++;
+    res.render('index.ejs', {action: alive, counter: counter});
     //alive
   }
 });

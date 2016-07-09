@@ -7,14 +7,37 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
-        <div class="navbar navbar-inverted">
-            <h1>NINJA SPLAT</h1>
-        </div>
-        <div class="container-fluid">
-            <div class="inner-cover">
-                <img src="" alt=""/>
+	</head>
+	<body>
+		<div class="navbar navbar-inverted">
+			<h1>NINJA SPLAT</h1>
+		</div>
+		<div class="container-fluid train">
+			<div class="inner-cover">
+				<% if (action === 'begin') { %>
+					<img src="penguin_ninja.png" alt="pengiunNinja" class="pengImg" />
+				<% } %>
+				<% if (action === 'dead') { %>
+					<img src="penguin_ninja_splat.png" alt="pengiunNinja" class="pengImg" />
+					<img src="train.jpg" alt="pengiunNinja" class="pengImg" />
+				<% } %>
+				<% if (action === 'alive') { %>
+					<img src="train.jpg" alt="pengiunNinja" class="pengImg" />
+					<img src="penguin_ninja.png" alt="pengiunNinja" class="pengImg" />
+				<% } %>
+
+			</div>
+            <div class="col-xs-12">
+						<% if (action === 'begin')  {%>
+							<form action="/go" method="get">
+								<input type="submit" class="btn btn-danger col-xs-6" value="I'm ready for the train!">
+			        </form>
+						<% } %>
+						<% if (action !== 'begin') { %>
+							<form action="/" method="get">
+								<input type="submit" class="btn btn-danger col-xs-6" value="Look! Another Ninja!">
+							</form>
+						<% } %>
             </div>
             <div class="col-xs-12">
 

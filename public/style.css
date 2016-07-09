@@ -15,3 +15,11 @@ h1 {
   height: 60px;
   background-color: #f5f5f5;
 }
+
+#delay1 {
+  position: relative;
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 2s;
+  font-size: 14px;
+}

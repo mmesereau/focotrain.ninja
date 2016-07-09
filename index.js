@@ -32,10 +32,6 @@ app.get('/go', function(req, res) {
   }
 });
 
-app.get('/restart', function(req, res) {
-
-});
-
 app.listen(3000, function() {
   console.log("Listening on 3000...");
 })

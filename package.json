@@ -17,5 +17,10 @@
   "bugs": {
     "url": "https://github.com/mmesereau/focotrain.ninja/issues"
   },
-  "homepage": "https://github.com/mmesereau/focotrain.ninja#readme"
+
+  "homepage": "https://github.com/mmesereau/focotrain.ninja#readme",
+  "dependencies": {
+    "ejs": "^2.4.2",
+    "express": "^4.14.0"
+  }
 }

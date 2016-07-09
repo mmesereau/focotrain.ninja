@@ -10,17 +10,24 @@
 	</head>
 	<body>
 		<div class="container-fluid">
-			<div class="navbar navbar-fixed-top">
-				<h1>NINJA SPLAT</h1>
+			<div class="row">
+					<h1>NINJA SPLAT</h1>
+				</div>
 			</div>
-
-            <div class="col-xs-12">
-				<form action="/go" method="get">
-		            <button type="submit" class="btn btn-primary">Submit</button>
-		        </form>
-            </div>
+			<div class="row">
+				<div class="col-xs-12">
+					<form action="/go" method="get">
+						<input type="submit" class="btn btn-primary" value="I'm ready for the train!">
+					</form>
+				</div>
+			</div>
 		<footer class="footer footer-fixed-bottom">
-			
+			<%counter.forEach(function(name) { %>
+				<p><%=name.name%></p>
+				<p><%=name.survived%></p>
+				<p><%=name.died%></p>
+			<% }); %>
+
 		</footer>
 		</div>
 		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>

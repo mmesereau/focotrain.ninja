@@ -17,26 +17,21 @@
 				<img src="" alt="" />
 			</div>
             <div class="col-xs-12">
-							
-						<form action="/go" method="get">
-							<input type="submit" class="btn btn-danger col-xs-6" value="I'm ready for the train!">
-		        </form>
+						<% if (action === 'begin')  {%>
+							<form action="/go" method="get">
+								<input type="submit" class="btn btn-danger col-xs-6" value="I'm ready for the train!">
+			        </form>
+						<% } %>
+						<% if (action !== 'begin') { %>
+							<form action="/" method="get">
+								<input type="submit" class="btn btn-danger col-xs-6" value="Look! Another Ninja!">
+							</form>
+						<% } %>
             </div>
-
 		</div>
 
 		<footer class="footer">
       		<div class="container">
-        		<nav>
-        			<ul>
-						<% names.forEach(function(names){ $>
-							<li></li>
-
-						<% }); %>
-        			</ul>
-        		</nav>
-
-        		</form>
 						<%counter.forEach(function(name) { %>
 							<p><%=name.name%></p>
 							<p><%=name.survived%></p>

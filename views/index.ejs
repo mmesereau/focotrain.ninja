@@ -18,9 +18,10 @@
 			</div>
             <div class="col-xs-12">
 				<form action="/go" method="get">
-		            <button type="submit" class="btn btn-danger col-xs-6">TRAIN!</button>
+					<input type="submit" class="btn btn-danger col-xs-6" value="I'm ready for the train!">
 		        </form>
             </div>
+
 		</div>
 
 		<footer class="footer">
@@ -33,6 +34,13 @@
 						<% }); %>
         			</ul>
         		</nav>
+
+        		</form>
+						<%counter.forEach(function(name) { %>
+							<p><%=name.name%></p>
+							<p><%=name.survived%></p>
+							<p><%=name.died%></p>
+						<% }); %>
       		</div>
     	</footer>
 

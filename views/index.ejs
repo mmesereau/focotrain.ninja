@@ -14,7 +14,16 @@
 		</div>
 		<div class="container-fluid train">
 			<div class="inner-cover">
-				<img src="penguin_ninja.png" alt="pengiunNinja" class="pengImg" />
+				<% if (action === 'begin') { %>
+					<img src="penguin_ninja.png" alt="pengiunNinja" class="pengImg" />
+				<% } %>
+				<% if (action === 'dead') { %>
+
+				<% } %>
+				<% if (action === 'alive') { %>
+
+					<img src="penguin_ninja.png" alt="pengiunNinja" class="pengImg" />
+				<% } %>
 
 			</div>
             <div class="col-xs-12">

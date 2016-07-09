@@ -23,3 +23,12 @@ h1 {
   transition-delay: 2s;
   font-size: 14px;
 }
+
+.pengImg {
+	height: 250px;
+	width: 250px;
+}
+
+.train {
+	background-image: url();
+}
